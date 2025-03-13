@@ -55,7 +55,13 @@ const CouponCard = () => {
     <>
       <ToastContainer position="top-right" autoClose={3000} />
 
-      <div className="bg-gradient-to-tl from-[#97ebf3] to-[#271bab] min-h-screen flex flex-col justify-center items-center p-4">
+      <div className="bg-gradient-to-tl from-[#97ebf3] to-[#271bab] min-h-screen relative flex flex-col justify-center items-center p-4">
+
+        <div className="absolute bg-gradient-to-br from-[#074b51] to-[#01212E] md:left-8 md:top-7 md:rounded-full w-full h-[20vh] top-0 left-0 md:size-72 flex items-center justify-center text-white p-4">
+          <h1>Note: Backend is deployed on <span className="font-bold">render(free-tier)</span>, the server will take upto <span className="font-bold">20-30</span> seconds to boot up, Please Wait... </h1>
+        </div>
+
+
         <h1 className="text-4xl md:text-5xl txt text-white mb-8 ">
           FAIRSHARE
         </h1>
@@ -75,7 +81,7 @@ const CouponCard = () => {
 
           <div className="mt-6 flex justify-center">
 
-          <button onClick={handleClaim} className=" uppercase bg-white rounded-full text-[#00292d] px-28 font-bold text-2xl py-2"><div className="primary">CLAIM</div><div className="sec">CLAIM</div></button>
+          <button onClick={handleClaim} className=" uppercase bg-white rounded-full text-[#00292d] md:px-28 px-12 font-bold text-2xl py-2"><div className="primary">CLAIM</div><div className="sec">CLAIM</div></button>
          
           </div>
         </div>
