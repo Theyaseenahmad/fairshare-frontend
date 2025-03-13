@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
 import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 interface ErrorResponse {
   error: string;
@@ -12,12 +13,15 @@ interface ErrorResponse {
 
 const CouponCard = () => {
   const [coupon, setCoupon] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleClaim = async () => {
+    setLoading(true)
     const lastClaimCookie = Number(Cookies.get('last_claim'));
 
     // Client-side check
     if (lastClaimCookie && (Date.now() - lastClaimCookie < 3600000)) {
+      setLoading(false)
       const remaining = Math.ceil((3600000 - (Date.now() - lastClaimCookie)) / 60000);
       toast(`Wait ${remaining} minutes! ⏳`);
       return;
@@ -26,14 +30,18 @@ const CouponCard = () => {
     try {
       const res = await apiClient.get('/claimCoupon'); 
       if (res.data.coupon) {
+        setLoading(false)
         setCoupon(res.data.coupon.code);
         toast(`Your coupon code is ${res.data.coupon.code}`);
       } else {
+        setLoading(false)
         toast(`${res.data.error}`);
       }
     } catch (error) {
       const axiosError = error as AxiosError;
+      setLoading(false)
       if (axiosError.response) {
+        
         const { status, data } = axiosError.response;
         const errorData = data as ErrorResponse;
         if (status === 429) {
@@ -72,6 +80,7 @@ const CouponCard = () => {
           </div>
 
           <div className="relative w-[60%] h-48 bg-white/50 rounded-xl overflow-hidden flex items-center justify-center">
+          {loading && <Loader2 className="animate-spin"/>}
             {coupon && (
               <div className="absolute inset-0 flex items-center justify-center bg-white/90 text-black text-2xl md:text-3xl font-bold tracking-tighter p-4">
                 {coupon}
