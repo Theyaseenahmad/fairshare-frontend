@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.grad {
+    background: linear-gradient(135deg, #00292d 50%, #01212e 50%);
+    border-radius: 2vw;
+    display: flex;
+    filter: drop-shadow(20px,30px,red);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #154a5f;
+    position: relative;
+    z-index: 1;
+    filter:drop-shadow(10px 10px 20px rgb(0, 0, 0))
+}
+
+
+button{
+    margin-top: 20px !important ;
+    position: relative;
+    z-index: 10;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    height: 44px;
+}
+
+button:hover{
+    scale: 1.1;
+}
+.primary{
+    transition: all 0.5s ease;
+    opacity: 0.8;
+}
+.sec{
+    transition: all 0.5s ease;
+opacity: 0;
+}
+
+button:hover .primary{
+    /* opacity: 0; */
+   
+    transform: translateY(-40px);
+    opacity: 0;
+}
+button:hover .sec{
+    /* opacity: 0; */
+   
+    transform: translateY(-33px);
+    opacity: 1;
+}
+
+.txt{
+     /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight if needed */
+    background: linear-gradient(45deg, #074b51, #01212E); /* Gradient colors */
+    /* -webkit-background-clip: text; For WebKit-based browsers like Safari */
+    background-clip: text; /* Standard property */ 
+    color: transparent; /* Hide the default text color */
+    text-align: center; /* Center the text */
+}
