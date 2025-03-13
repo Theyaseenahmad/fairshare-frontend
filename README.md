@@ -1,5 +1,8 @@
 # React + TypeScript + Vite
 
+
+### [for Details About this project go to repo](https://github.com/Theyaseenahmad/fairshare-backend)
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
