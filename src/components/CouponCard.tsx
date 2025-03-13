@@ -24,7 +24,7 @@ const CouponCard = () => {
     }
 
     try {
-      const res = await apiClient.get('http://localhost:3000/claimCoupon');
+      const res = await apiClient.get(`${import.meta.env.REACT_APP_API_URL}/claimCoupon`);
       if (res.data.coupon) {
         setCoupon(res.data.coupon.code);
         toast(`Your coupon code is ${res.data.coupon.code}`);
