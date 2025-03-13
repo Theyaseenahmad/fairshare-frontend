@@ -24,7 +24,7 @@ const CouponCard = () => {
     }
 
     try {
-      const res = await apiClient.get(`${import.meta.env.VITE_API_URL}/claimCoupon`);
+      const res = await apiClient.get('/claimCoupon'); 
       if (res.data.coupon) {
         setCoupon(res.data.coupon.code);
         toast(`Your coupon code is ${res.data.coupon.code}`);
