@@ -45,7 +45,7 @@ const CouponCard = () => {
         const { status, data } = axiosError.response;
         const errorData = data as ErrorResponse;
         if (status === 429) {
-          toast(`Error: ${errorData.error}\nPlease retry after ${errorData.retryAfter} seconds.`);
+          toast(`${errorData.error}\nPlease retry after ${errorData.retryAfter} seconds.`);
         }
         else if(status === 404){
           toast(`No coupons Left !`);
