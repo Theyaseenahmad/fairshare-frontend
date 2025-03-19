@@ -49,7 +49,9 @@ graph TD
     C -->|Within Limit| E[Block Claim]
     C -->|Valid Claim| F[Update Cookie & Redis]
     D -->|IP Exists| G[Check Time Difference]
-    D -->|New IP| H[Allow Claim]
+    D -->|New IP| H[Allow Claim] 
+    
+```
 
 
 🚀 Performance Advantages
