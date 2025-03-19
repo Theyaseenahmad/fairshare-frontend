@@ -1,3 +1,5 @@
+markdown
+Copy
 # FairShare - Coupon Sharing Platform 🎫
 
 [![Live Deployment](https://img.shields.io/badge/Deployment-Vercel-brightgreen)](https://fairshare-frontend.vercel.app)
@@ -39,8 +41,6 @@ Vercel (Frontend) | Render (Backend) | Redis Labs
 
 ## 🔄 Workflow Diagram
 
-## 🔄 Workflow Diagram
-
 ```mermaid
 graph TD
     A[User Attempts Claim] --> B{Check Browser Cookie}
@@ -50,9 +50,7 @@ graph TD
     C -->|Valid Claim| F[Update Cookie & Redis]
     D -->|IP Exists| G[Check Time Difference]
     D -->|New IP| H[Allow Claim]
-
-
-    🚀 Performance Advantages
+🚀 Performance Advantages
 ⚡ 50-70% Faster Response Times through Redis caching
 
 📈 3x Scalability with in-memory rate limiting
@@ -62,11 +60,13 @@ graph TD
 📦 Client-Side Tracking with secure browser cookies
 
 📥 Installation
-Clone repositories :
- git clone https://github.com/Theyaseenahmad/fairshare-frontend.git
- git clone https://github.com/Theyaseenahmad/fairshare-backend.git
+Clone repositories
 
- Frontend setup
+bash
+Copy
+git clone https://github.com/Theyaseenahmad/fairshare-frontend.git
+git clone https://github.com/Theyaseenahmad/fairshare-backend.git
+Frontend setup
 
 bash
 Copy
@@ -78,8 +78,7 @@ bash
 Copy
 cd ../fairshare-backend
 npm install
-
- Configuration
+⚙️ Configuration
 Frontend (.env)
 
 env
@@ -93,8 +92,7 @@ Copy
 REDIS_URL=your_redis_connection_string
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
-
-Running the Application
+▶️ Running the Application
 Frontend
 
 bash
@@ -106,8 +104,7 @@ Backend
 bash
 Copy
 npm run dev
-# Runs on http://localhost:5173
-
+# Runs on http://localhost:8000
 🤝 Contributing
 Fork the repository
 
