@@ -39,6 +39,8 @@ Vercel (Frontend) | Render (Backend) | Redis Labs
 
 ## 🔄 Workflow Diagram
 
+## 🔄 Workflow Diagram
+
 ```mermaid
 graph TD
     A[User Attempts Claim] --> B{Check Browser Cookie}
