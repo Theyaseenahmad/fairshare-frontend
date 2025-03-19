@@ -8,7 +8,7 @@ Copy
 **Live Demo:**  
 [https://fairshare-frontend.vercel.app](https://fairshare-frontend.vercel.app)
 
-![FairShare Banner](Fairshare.png)
+![FairShare Banner](https://raw.githubusercontent.com/Theyaseenahmad/fairshare-frontend/main/public/Fairshare.png)
 
 A high-performance coupon sharing platform with rate limiting and abuse prevention features.
 
@@ -51,7 +51,7 @@ graph TD
     D -->|IP Exists| G[Check Time Difference]
     D -->|New IP| H[Allow Claim]
 
-    
+
 🚀 Performance Advantages
 ⚡ 50-70% Faster Response Times through Redis caching
 
